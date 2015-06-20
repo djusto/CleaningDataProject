@@ -65,6 +65,3 @@ write.table( dc,file="tidydata.txt", row.name=FALSE )
 # mean( df[ii,4]  )
 # mean( df[ii,5]  )
 # dc[9,1:5]                            # matches the answer from dcast 
- 
-
-
