@@ -1,13 +1,15 @@
 # run_analysis.R
 #
-# This file should be located in the ./UCI HAR Dataset/ folder that
-#   contains the /test and /train subfolder with the data.
-#
+# The Samsung data should be in the working directory. The files are
+#  X_test.txt,  Y_test.txt,  subject_test.txt,
+#  X_train.txt, Y_train.txt, subject_train.txt,
+#  features.txt, activity_labels.txt  
+#  
 #-------------------------------------------------------------------
 #1 Merges the training and the test sets to create one data set.
 #-------------------------------------------------------------------
-Xtest  <- read.table('test/X_test.txt')    # data set
-Xtrain <- read.table('train/X_train.txt')  # data set
+Xtest  <- read.table('X_test.txt')    # data set
+Xtrain <- read.table('X_train.txt')   # data set
 X      <- rbind( Xtest,Xtrain)
 
 #-------------------------------------------------------------------
@@ -28,13 +30,13 @@ colnames(X)<- features[cbind(has_mean,has_std),2]
 #3 Uses descriptive activity names to name the activities in the data set
 #-------------------------------------------------------------------
 
-subject1  <- read.table('test/subject_test.txt')      
-subject2  <- read.table('train/subject_train.txt')  
+subject1  <- read.table('subject_test.txt')      
+subject2  <- read.table('subject_train.txt')  
 subject   <- rbind( subject1, subject2 )
 subject   <- as.numeric( subject$V1 )           # only a vector 
 
-Ytest    <- read.table('test/Y_test.txt')       # activities in test
-Ytrain   <- read.table('train/Y_train.txt')     #  and trains
+Ytest    <- read.table('Y_test.txt')       # activities in test
+Ytrain   <- read.table('Y_train.txt')     #  and trains
 Y        <- rbind( Ytest, Ytrain )
 labels   <- read.table("activity_labels.txt")   # descriptive names
  
