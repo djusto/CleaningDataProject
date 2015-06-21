@@ -1,14 +1,16 @@
 # Getting and Cleaning Data project
-The script run_analysis.R works by reading the data files that should be in the working directory.
+Important: It depends on the `reshape2` package.
+
+The script `run_analysis.R` works by reading the data files that should be in the working directory.
 The files are:
 
-- 'features.txt': List of all features.
-- 'activity_labels.txt': Links the class labels with their activity name.
-- 'X_train.txt': Training set.
-- 'y_train.txt': Training labels.
-- 'X_test.txt': Test set.
-- 'y_test.txt': Test labels.
-- 'subject_train.txt': Training: Each row identifies the subject who performed the activity for each window sample. Its range is from 1 to 30. 
+- `features.txt`: List of all features.
+- `activity_labels.txt`: Links the class labels with their activity name.
+- `X_train.txt`: Training set.
+- `y_train.txt`: Training labels.
+- `X_test.txt`: Test set.
+- `y_test.txt`: Test labels.
+- `subject_train.txt`: Training: Each row identifies the subject who performed the activity for each window sample. Its range is from 1 to 30. 
 - 'subject_test.txt': Test: Each row identifies the subject who performed the activity for each window sample. Its range is from 1 to 30. 
 
 The script follow the instructions for the project (as commented in the code):
