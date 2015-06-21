@@ -53,7 +53,7 @@ head( df )
 #  independent tidy data set with the average of each variable
 #  for each activity and each subject.
 #-------------------------------------------------------------------
-
+library(reshape2)
 dfMelt <- melt( df, id=c("subject","activity") )
 
 dc <- dcast( dfMelt, subject + activity ~ ... ,mean)
